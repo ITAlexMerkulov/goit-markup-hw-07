@@ -24,7 +24,7 @@
   --nav-letter-spacing: 0.02em;
 
   /* transition var */
-  --transition-properties: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-properties: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -41,6 +41,7 @@ body ul {
 
 .flexbox {
   display: flex;
+  align-items: center;
 }
 
 .margin-null {
@@ -446,16 +447,12 @@ body ul {
 
 .network-item .network-link {
   background-color: rgba(255, 255, 255, 0.1);
-  transition: var(--transition-properties);
 }
 
 .network-link .foter-icon {
   fill: var(--color-white);
 }
 
-.footer-box {
-  box-sizing: inline-flex;
-}
 .footer-address {
   padding-inline-start: 0px;
 }
@@ -472,7 +469,7 @@ body ul {
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-top: 12px;
+  margin-top: 0px;
   margin-bottom: 20px;
   color: var(--color-white);
 }
@@ -502,7 +499,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
 }
 .network-list li + li {
   margin-left: 10px;
@@ -511,8 +507,9 @@ p {
 .network-icon {
   width: 20px;
   height: 20px;
-  fill: var(--color-networks-link);
+  transition: var(--transition-properties);
 }
+
 .network-link {
   display: flex;
   justify-content: center;
@@ -520,10 +517,11 @@ p {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--color-white);
   transition: var(--transition-properties);
+  fill: var(--color-networks-link);
 }
 .network-link:hover {
+  fill: var(--color-networks-link);
   background-color: var(--color-blue);
   transition: var(--transition-properties);
 }
@@ -724,13 +722,13 @@ PORTFOLIO.HTML
   background: rgba(0, 0, 0, 0.2);
   overflow: auto;
   padding: 50px;
-  transition: 400ms linear 400ms;
+  transition: var(--transition-properties);
 }
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: 400ms linear 400ms;
+  transition: var(--transition-properties);
 }
 
 .modal-window {

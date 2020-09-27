@@ -444,15 +444,15 @@
           <address class="footer-link">
             <p>г. Киев, пр-т Леси Украинки, 26</p>
 
-            <div>
+            <div class="footer-contacts">
               <ul class="footer-address">
-                <li>
+                <li class="footer-mail-item">
                   <a href="mailto:info@example.com" class="link"
                     >info@example.com</a
                   >
                 </li>
 
-                <li>
+                <li class="footer-phone-item">
                   <a href="tel:+380991111111" class="link">+38 099 111 11 11</a>
                 </li>
               </ul>
@@ -501,12 +501,37 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <form action="#" method="POST">
+          <label class="modal-text"
+            >Имя
+            <input type="text" name="message" placeholder="Введите сообщение" />
+          </label>
+
+          <label class="modal-text"
+            >Телефон
+            <input type="tel" name="message" placeholder="Введите сообщение" />
+          </label>
+
+          <label class="modal-text"
+            >Почта
+            <input type="email" name="message" placeholder="" />
+          </label>
+
+          <label class="modal-text"
+            >Комментарий
+            <textarea name="textarea" id="" cols="30" rows="10" resize:none>
+Введите текст </textarea
+            >
+          </label>
+          <button type="button" class="main-button">Отправить</button>
+        </form>
+
         <button class="btn-close" data-modal-close>
           <svg class="close-icon">
-            <use href="./images/icon/close.svg#close"></use>
+            <use href="./images/icon/symbol-defs.svg#close"></use>
           </svg>
         </button>
-        <p>modal-window</p>
       </div>
     </div>
     <script src="./js/modal.js"></script>
