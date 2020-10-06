@@ -434,7 +434,7 @@
 
     <footer class="footer">
       <div class="container flexbox">
-        <div class="footer-box">
+        <div class="footer-box addres-block">
           <a href="#" class="logo-footer">
             <p class="logo-text">
               <span class="logo logo-left">Web</span
@@ -459,7 +459,7 @@
             </div>
           </address>
         </div>
-        <div class="footer-box">
+        <div class="footer-box contacts-block">
           <h3 class="footer-text">Присоединяйтесь</h3>
           <ul class="network-list">
             <li class="network-item">
@@ -497,36 +497,70 @@
             </li>
           </ul>
         </div>
+        <div class="footer-box form-block">
+          <h3 class="footer-text">Подпишитесь на рассылку</h3>
+          <form action="footer-form">
+            <input class="form-mail" type="email" placeholder="E-mail" />
+            <button class="footer-button">
+              Подписаться
+              <svg class="telegram-icon">
+                <use href="./images/icon/symbol-defs.svg#telegram"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-        <form action="#" method="POST">
-          <label class="modal-text"
-            >Имя
-            <input type="text" name="message" placeholder="Введите сообщение" />
+        <form class="modal-form" action="#" method="POST">
+          <label class="modal-input">
+            <span class="modal-text">Имя</span>
+            <input class="input-form" type="text" name="message" required />
+            <svg class="form-icon">
+              <use href="./images/icon/symbol-defs.svg#person-black"></use>
+            </svg>
           </label>
 
-          <label class="modal-text"
-            >Телефон
-            <input type="tel" name="message" placeholder="Введите сообщение" />
+          <label class="modal-input">
+            <span class="modal-text">Телефон</span>
+            <input class="input-form" type="tel" name="message" required />
+            <svg class="form-icon">
+              <use href="./images/icon/symbol-defs.svg#phone-black"></use>
+            </svg>
           </label>
 
-          <label class="modal-text"
-            >Почта
-            <input type="email" name="message" placeholder="" />
+          <label class="modal-input">
+            <span class="modal-text">Почта</span>
+            <input class="input-form" type="email" name="message" required />
+            <svg class="form-icon">
+              <use href="./images/icon/symbol-defs.svg#email-black"></use>
+            </svg>
           </label>
 
-          <label class="modal-text"
-            >Комментарий
-            <textarea name="textarea" id="#" cols="30" rows="10">
-Введите текст </textarea
-            >
+          <label class="modal-input">
+            <span class="modal-text">Комментарий</span>
+            <textarea
+              class="modal-comment"
+              name="textarea"
+              id="#"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+
+          <!-- checkbox -->
+          <label for="" class="checkbox-label">
+            <input type="checkbox" class="checkbox" />
+            <span class="checkbox-text checkbox"
+              >Соглашаюсь с рассылкой и принимаю
+              <a class="checkbox-link" href="#">Условия договора</a>
+            </span>
           </label>
           <button type="button" class="main-button">Отправить</button>
         </form>
 
+        <!-- btn-close -->
         <button class="btn-close" data-modal-close>
           <svg class="close-icon">
             <use href="./images/icon/symbol-defs.svg#close"></use>
