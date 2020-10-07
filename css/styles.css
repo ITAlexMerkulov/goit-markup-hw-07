@@ -24,7 +24,7 @@
   --nav-letter-spacing: 0.02em;
 
   /* transition var */
-  --transition-properties: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-properties: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -41,7 +41,7 @@ body ul {
 
 .flexbox {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .margin-null {
@@ -195,8 +195,12 @@ body ul {
 
 /* .header-logo {
 } */
-.logo-footer {
+.logo-footer-right {
   color: var(--color-white);
+}
+
+.logo-footer {
+  display: inline-block;
   margin-bottom: 20px;
 }
 /* END logo css */
@@ -487,11 +491,6 @@ body ul {
 }
 .contacts-block {
   margin-right: 93px;
-}
-
-.logo-text {
-  margin-block-start: 0;
-  margin-bottom: 20px;
 }
 
 .network-item .network-link {
