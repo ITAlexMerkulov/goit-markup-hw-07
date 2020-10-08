@@ -24,7 +24,7 @@
   --nav-letter-spacing: 0.02em;
 
   /* transition var */
-  --transition-properties: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-properties: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -454,13 +454,7 @@ body ul {
 }
 
 .footer-button {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  padding: 10px 28px;
-  min-width: 200px;
+  padding: 8px 31px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
@@ -561,6 +555,7 @@ p {
 .telegram-icon {
   width: 24px;
   height: 24px;
+  margin-left: 10px;
   fill: var(--color-white);
 }
 .network-link {
@@ -570,13 +565,13 @@ p {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: var(--transition-properties);
+  transition: background-color var(--transition-properties);
   fill: var(--color-networks-link);
 }
 .network-link:hover {
   fill: var(--color-networks-link);
   background-color: var(--color-blue);
-  transition: var(--transition-properties);
+  /* transition: var(--transition-properties); */
 }
 .network-link:hover .network-icon {
   fill: var(--color-white);
