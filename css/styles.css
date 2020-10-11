@@ -24,7 +24,7 @@
   --nav-letter-spacing: 0.02em;
 
   /* transition var */
-  --transition-properties: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-properties: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -925,6 +925,8 @@ PORTFOLIO.HTML */
 }
 
 .checkbox-label {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -945,7 +947,8 @@ PORTFOLIO.HTML */
   border-radius: 2px;
   margin-right: 8px;
   border: 2px solid var(--color-black);
-  transition: background-color var(--transition-properties);
+  transition: background-color var(--transition-properties),
+    border var(--transition-properties);
 }
 
 .checkbox:checked + .checked {
@@ -953,7 +956,8 @@ PORTFOLIO.HTML */
   background-color: var(--color-blue);
   background-image: url(../images/icon/checked.svg);
   background-size: contain;
-  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 .checkbox-text {
   font-family: Roboto;
