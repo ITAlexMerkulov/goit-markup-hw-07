@@ -929,15 +929,39 @@ PORTFOLIO.HTML */
 }
 
 .checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.checked {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  margin-right: 8px;
+  border: 2px solid var(--color-black);
+  transition: background-color var(--transition-properties);
+}
+
+.checkbox:checked + .checked {
+  border-color: var(--color-blue);
+  background-color: var(--color-blue);
+  background-image: url(../images/icon/checked.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+.checkbox-text {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-}
-
-.checkbox-text {
   color: var(--color-grey);
 }
 
