@@ -24,7 +24,7 @@
 
           <ul class="nav-size site-nav">
             <li class="item">
-              <a href="#" class="nav-light link">Студия</a>
+              <a href="#" class="nav-light link nav-underline">Студия</a>
             </li>
 
             <li class="item">
@@ -71,7 +71,7 @@
             для вашего бизнеса
           </h1>
 
-          <button type="button" href="#" class="main-button">
+          <button type="button" class="main-button" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -141,17 +141,20 @@
         <div class="container">
           <h2 class="text-about">Чем мы занимаемся</h2>
           <ul class="about-image">
-            <li class="item">
+            <li class="item about-image-item">
               <img src="./images/1.jpg" alt="рабочий стол с клавиатурой" />
+              <h3 class="about-image-title">Десктопные приложения</h3>
             </li>
-            <li class="item">
+            <li class="item about-image-item">
               <img
                 src="./images/2.jpg"
                 alt="телефон перед открытым ноутбуком"
               />
+              <h3 class="about-image-title">Мобильные приложения</h3>
             </li>
-            <li class="item">
+            <li class="item about-image-item">
               <img src="./images/3.jpg" alt="цветовая палитра на планшете" />
+              <h3 class="about-image-title">Дизайнерские решения</h3>
             </li>
           </ul>
         </div>
@@ -170,7 +173,7 @@
               />
               <h3>Игорь Демьяненко</h3>
               <p>Product Designer</p>
-              <ul class="network-list">
+              <ul class="network-list team-network-margin">
                 <li class="network-item">
                   <a class="network-link" href="https://www.instagram.com/">
                     <svg class="network-icon">
@@ -222,7 +225,7 @@
 
               <h3>Ольга Репина</h3>
               <p>Frontend Developer</p>
-              <ul class="network-list">
+              <ul class="network-list team-network-margin">
                 <li class="network-item">
                   <a class="network-link" href="https://www.instagram.com/">
                     <svg class="network-icon">
@@ -275,7 +278,7 @@
               <h3>Николай Тарасов</h3>
 
               <p>Marketing</p>
-              <ul class="network-list">
+              <ul class="network-list team-network-margin">
                 <li class="network-item">
                   <a class="network-link" href="https://www.instagram.com/">
                     <svg class="network-icon">
@@ -326,7 +329,7 @@
               />
               <h3>Михаил Ермаков</h3>
               <p>UI Designer</p>
-              <ul class="network-list">
+              <ul class="network-list team-network-margin">
                 <li class="network-item">
                   <a class="network-link" href="https://www.instagram.com/">
                     <svg class="network-icon">
@@ -431,32 +434,32 @@
 
     <footer class="footer">
       <div class="container flexbox">
-        <div class="footer-box">
+        <div class="footer-box addres-block">
           <a href="#" class="logo-footer">
             <p class="logo-text">
               <span class="logo logo-left">Web</span
-              ><span class="logo logo-footer">Studio</span>
+              ><span class="logo logo-footer-right">Studio</span>
             </p>
           </a>
           <address class="footer-link">
             <p>г. Киев, пр-т Леси Украинки, 26</p>
 
-            <div>
+            <div class="footer-contacts">
               <ul class="footer-address">
-                <li>
+                <li class="footer-mail-item">
                   <a href="mailto:info@example.com" class="link"
                     >info@example.com</a
                   >
                 </li>
 
-                <li>
+                <li class="footer-phone-item">
                   <a href="tel:+380991111111" class="link">+38 099 111 11 11</a>
                 </li>
               </ul>
             </div>
           </address>
         </div>
-        <div class="footer-box">
+        <div class="footer-box contacts-block">
           <h3 class="footer-text">Присоединяйтесь</h3>
           <ul class="network-list">
             <li class="network-item">
@@ -494,10 +497,77 @@
             </li>
           </ul>
         </div>
+        <div class="footer-box form-block">
+          <h3 class="footer-text">Подпишитесь на рассылку</h3>
+          <form action="footer-form">
+            <input class="form-mail" type="email" placeholder="E-mail" />
+            <button class="footer-button">
+              Подписаться
+              <svg class="telegram-icon">
+                <use href="./images/icon/symbol-defs.svg#telegram"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
-    <div class="modal-window">
-      <div></div>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-window">
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <form class="modal-form" action="#" method="POST">
+          <label class="modal-input">
+            <span class="modal-text">Имя</span>
+            <input class="input-form" type="text" name="message" required />
+            <svg class="form-icon">
+              <use href="./images/icon/symbol-defs.svg#person-black"></use>
+            </svg>
+          </label>
+
+          <label class="modal-input">
+            <span class="modal-text">Телефон</span>
+            <input class="input-form" type="tel" name="message" required />
+            <svg class="form-icon">
+              <use href="./images/icon/symbol-defs.svg#phone-black"></use>
+            </svg>
+          </label>
+
+          <label class="modal-input">
+            <span class="modal-text">Почта</span>
+            <input class="input-form" type="email" name="message" required />
+            <svg class="form-icon">
+              <use href="./images/icon/symbol-defs.svg#email-black"></use>
+            </svg>
+          </label>
+
+          <label class="modal-input">
+            <span class="modal-text">Комментарий</span>
+            <textarea
+              class="modal-comment"
+              name="textarea"
+              id="#"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+
+          <!-- checkbox -->
+          <label class="checkbox-label">
+            <input type="checkbox" class="checkbox" />
+            <span class="checkbox-text checkbox"
+              >Соглашаюсь с рассылкой и принимаю
+              <a class="checkbox-link" href="#">Условия договора</a>
+            </span>
+          </label>
+          <button type="button" class="main-button">Отправить</button>
+        </form>
+
+        <!-- btn-close -->
+        <button class="btn-close" data-modal-close>
+          <svg class="close-icon">
+            <use href="./images/icon/symbol-defs.svg#close"></use>
+          </svg>
+        </button>
+      </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
