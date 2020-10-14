@@ -14,43 +14,43 @@
   <body>
     <header class="header">
       <div class="container">
-        <nav class="main-nav">
-          <a href="./index.html" class="logo-link">
-            <p class="header-logo">
-              <span class="logo logo-left">Web</span
-              ><span class="logo logo-right">Studio</span>
+        <nav class="navigation">
+          <a href="./index.html" class="logo__link">
+            <p class="logo__text">
+              <span class="logo logo__text--left">Web</span
+              ><span class="logo logo__text--right">Studio</span>
             </p>
           </a>
 
-          <ul class="nav-size site-nav">
-            <li class="item">
-              <a href="#" class="nav-light link nav-underline">Студия</a>
+          <ul class="menu navigation--size flexbox">
+            <li class="menu__item">
+              <a href="#" class="menu__link link menu--underline">Студия</a>
             </li>
 
-            <li class="item">
-              <a href="./portfolio.html" class="link">Портфолио</a>
+            <li class="menu__item">
+              <a href="./portfolio.html" class="menu__link link">Портфолио</a>
             </li>
 
-            <li class="item">
-              <a href="#" class="link">Контакты</a>
+            <li class="menu__item">
+              <a href="#" class="menu__link link">Контакты</a>
             </li>
           </ul>
 
           <ul class="nav-address">
-            <li class="item">
+            <li class="nav-address__item">
               <a
                 href="mailto:info@devstudio.com"
-                class="link nav-color nav-size"
+                class="nav-address__link link nav-address--color menu navigation--size"
               >
-                <svg class="icon-envelope">
+                <svg class="nav-address__icon-envelope">
                   <use href="./images/icon/symbol-defs.svg#icon-envelope"></use>
                 </svg>
                 info@devstudio.com
               </a>
             </li>
-            <li class="item">
-              <a href="tel:+380961111111" class="link nav-color nav-size">
-                <svg class="icon-smartphone">
+            <li class="nav-address__item">
+              <a href="tel:+380961111111" class="nav-address__link link nav-address--color menu navigation--size">
+                <svg class="nav-address__icon-smartphone">
                   <use
                     href="./images/icon/symbol-defs.svg#icon-smartphone"
                   ></use>
@@ -64,14 +64,14 @@
     </header>
 
     <main>
-      <section class="main-section">
+      <section class="main">
         <div class="container">
-          <h1 class="main-text">
+          <h1 class="main__text">
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
 
-          <button type="button" class="main-button" data-modal-open>
+          <button type="button" class="main__button" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -435,10 +435,10 @@
     <footer class="footer">
       <div class="container flexbox">
         <div class="footer-box addres-block">
-          <a href="#" class="logo-footer">
-            <p class="logo-text">
-              <span class="logo logo-left">Web</span
-              ><span class="logo logo-footer-right">Studio</span>
+          <a href="#" class="logo__footer">
+            <p class="logo__text">
+              <span class="logo logo__text--left">Web</span
+              ><span class="logo logo__footer--right">Studio</span>
             </p>
           </a>
           <address class="footer-link">
@@ -500,7 +500,7 @@
         <div class="footer-box form-block">
           <h3 class="footer-text">Подпишитесь на рассылку</h3>
           <form action="footer-form">
-            <input class="form-mail" type="email" placeholder="E-mail" />
+            <input class="form-mail" name="email" type="email" placeholder="E-mail" />
             <button class="footer-button">
               Подписаться
               <svg class="telegram-icon">
@@ -518,7 +518,7 @@
           <label class="modal-input">
             <span class="modal-text">Имя</span>
             <input class="input-form" type="text" name="message" required />
-            <svg class="form-icon">
+            <svg class="form-icon form-icon-person">
               <use href="./images/icon/symbol-defs.svg#person-black"></use>
             </svg>
           </label>
@@ -526,7 +526,7 @@
           <label class="modal-input">
             <span class="modal-text">Телефон</span>
             <input class="input-form" type="tel" name="message" required />
-            <svg class="form-icon">
+            <svg class="form-icon form-icon-phone">
               <use href="./images/icon/symbol-defs.svg#phone-black"></use>
             </svg>
           </label>
@@ -534,7 +534,7 @@
           <label class="modal-input">
             <span class="modal-text">Почта</span>
             <input class="input-form" type="email" name="message" required />
-            <svg class="form-icon">
+            <svg class="form-icon form-icon-email">
               <use href="./images/icon/symbol-defs.svg#email-black"></use>
             </svg>
           </label>
@@ -551,8 +551,9 @@
 
           <!-- checkbox -->
           <label class="checkbox-label">
-            <input type="checkbox" class="checkbox" />
-            <span class="checkbox-text checkbox"
+            <input type="checkbox" class="checkbox" name="checkbox" />
+            <span class="checked"></span>
+            <span class="checkbox-text "
               >Соглашаюсь с рассылкой и принимаю
               <a class="checkbox-link" href="#">Условия договора</a>
             </span>
