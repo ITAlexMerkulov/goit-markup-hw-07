@@ -1,0 +1,39 @@
+.logo {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+
+  &__link {
+    margin-right: 93px;
+  }
+
+  &__link p {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
+.logo__text {
+  &--left {
+    color: var(--color-blue);
+  }
+
+  &--right {
+    color: var(--color-black);
+  }
+}
+
+.logo__footer {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  &--right {
+    color: var(--color-white);
+  }
+}

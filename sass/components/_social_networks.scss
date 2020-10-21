@@ -1,0 +1,33 @@
+/* social network svg */
+.network-icon {
+  width: 20px;
+  height: 20px;
+  transition: fill var(--transition-properties);
+}
+.telegram-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  fill: var(--color-white);
+}
+
+.network-list {
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color var(--transition-properties),
+      fill var(--transition-properties);
+    fill: var(--color-networks-link);
+  }
+  &__link:hover {
+    fill: var(--color-networks-link);
+    background-color: var(--color-blue);
+  }
+  &__link:hover .network-icon {
+    fill: var(--color-white);
+  }
+}

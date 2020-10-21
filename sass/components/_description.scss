@@ -1,0 +1,48 @@
+/* Start section description */
+.section-desc {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.desc-content {
+  display: flex;
+  padding-inline-start: 0px;
+  margin: 0;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-black);
+  }
+
+  &__text {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--color-grey);
+    line-height: 1.71;
+    /* or 171% */
+    letter-spacing: 0.03em;
+  }
+  &__item + &__item {
+    margin-left: 30px;
+  }
+
+  &--icon-box {
+    margin-bottom: 30px;
+  }
+  &--icon {
+    width: 270px;
+    height: 120px;
+    background: #f5f4fa;
+    border-radius: 4px;
+  }
+}
